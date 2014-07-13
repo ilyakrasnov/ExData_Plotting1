@@ -18,7 +18,7 @@ consumption$Date <- dateTime
 
 # Make the plot
 png(file="plot3.png")
-plot(consumption$Date,consumption$Sub_metering_1,type="l")
+plot(consumption$Date,consumption$Sub_metering_1,type="l",xlab=NA,ylab="Energy sub metering")
 lines(consumption$Date,consumption$Sub_metering_2,type="l",col="red")
 lines(consumption$Date,consumption$Sub_metering_3,type="l",col="blue")
 

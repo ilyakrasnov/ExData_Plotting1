@@ -18,5 +18,5 @@ consumption$Date <- dateTime
 
 # Make the plot
 png(file="plot2.png")
-plot(consumption$Date,consumption$Global_active_power,type="l")
+plot(consumption$Date,consumption$Global_active_power,type="l",xlab=NA,ylab="Global Active Power (kilowatts)")
 dev.off()

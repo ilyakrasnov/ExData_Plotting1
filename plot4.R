@@ -24,17 +24,17 @@ par(mfrow=c(2,2))
 
 
 # Add plot 1
-plot(consumption$Date,consumption$Global_active_power,type="l")
+plot(consumption$Date,consumption$Global_active_power,type="l",xlab=NA,ylab="Global Active Power")
 # Add plot 2
-plot(consumption$Date,consumption$Voltage,type="l")
+plot(consumption$Date,consumption$Voltage,type="l",xlab="datetime",ylab="Voltage")
 # Add plot 3
-plot(consumption$Date,consumption$Sub_metering_1,type="l")
+plot(consumption$Date,consumption$Sub_metering_1,type="l",xlab=NA,ylab="Energy sub metering")
 lines(consumption$Date,consumption$Sub_metering_2,type="l",col="red")
 lines(consumption$Date,consumption$Sub_metering_3,type="l",col="blue")
 col <- c("black","red","blue")
 colnms <- c("Sub_metering_1","Sub_metering_2","Sub_metering_3")
 legend("topright", col=col, lwd=c(1, 1.5, 2), legend=colnms,box.col=NA)
 # Add plot 4
-plot(consumption$Date,consumption$Global_reactive_power,type="l")
+plot(consumption$Date,consumption$Global_reactive_power,type="l",xlab="datetime",ylab="Global_relative_power")
 
 dev.off()
